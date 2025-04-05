@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Holo-Pet Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <header>
+    <h1>Holo-Pet</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#customize">Customize</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="./assets/holo dog.webp" alt="Holo Pet" />
+    <h2>Bring your fantasy to light</h2>
+    <div class="cta">
+      <button onclick="alert('Meet the pets coming soon!')">Meet the Pets</button>
+      <button onclick="location.href='#customize'">Start Designing</button>
+    </div>
+    <audio id="hover-sound" src="assets/hover-sound.mp3" preload="auto"></audio>
+  </section>
+
+  <section id="customize">
+    <h2>Customize Your Pet</h2>
+    <p>Design your perfect holographic companion</p>
+
+    <div class="customize-container">
+      <div id="pet-preview" class="glow-border">
+        <img src="./assets/holo-cat.png" alt="Preview" id="preview-image" />
+        <h3 id="pet-name-display">Name: N/A</h3>
+        <p id="pet-desc">A shimmering feline friend.</p>
+      </div>
+
+      <div class="options">
+        <label for="pet-select">Choose Pet Type:</label>
+        <select id="pet-select">
+          <option value="Holo-Cat">Holo-Cat</option>
+          <option value="Holo-Dragon">Holo-Dragon</option>
+          <option value="Holo-Fox">Holo-Fox</option>
+        </select>
+
+        <label for="color-picker">Pick Glow Color:</label>
+        <input type="color" id="color-picker" value="#00ffff" />
+
+        <label for="pet-name">Name Your Pet:</label>
+        <input type="text" id="pet-name" placeholder="e.g., Lumi" />
+
+        <button onclick="savePet()">Save My Pet</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2>Holo Pet Gear</h2>
+    <div class="shop-item glow-border">
+      <h3>Holo-Collar</h3>
+      <p>Synchronizes with your pet's emotion glow</p>
+    </div>
+    <div class="shop-item glow-border">
+      <h3>Light Leash</h3>
+      <p>Walk your pet in air with guided light lines</p>
+    </div>
+    <form id="shopForm">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your message"></textarea>
+      <button type="submit">Order</button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We believe the future of companionship is virtual, yet real. Our holographic pets are created with light, love, and leading tech.</p>
+  </section>
+  <footer class="social-footer">
+    <a href="https://www.linkedin.com/in/divyam-chhabra-a11950245/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Coder-727" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:divyam.chhabra2022@vitstudent.ac.in" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </footer>
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>

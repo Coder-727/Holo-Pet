@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Your Holo-Pet</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">Holo-Pets</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="customize.html">Customize</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="customize-lab">
+    <h1>Build Your Dream Companion</h1>
+    <p>Choose, style, and name your futuristic friend!</p>
+
+    <div class="customize-container">
+      <div id="pet-preview" class="holo-pet-preview">
+        <img src="./assets/cat.webp" alt="Preview" class="holo-pet" id="preview-image" />
+        <h3 id="pet-name-display">Name: Glowy</h3>
+        <p id="pet-desc">A shimmering feline friend.</p>
+      </div>
+
+      <div class="options">
+        <label for="pet-select">Select a Pet:</label>
+        <select id="pet-select">
+          <option value="Holo-Cat">Holo-Cat</option>
+          <option value="Holo-Dragon">Holo-Dragon</option>
+          <option value="Holo-Fox">Holo-Fox</option>
+        </select>
+
+        <label for="color-picker">Choose a Theme Color:</label>
+        <input type="color" id="color-picker" value="#00ffff" />
+
+        <label for="pet-name">Give Your Pet a Name:</label>
+        <input type="text" id="pet-name" placeholder="e.g., Lumi" />
+
+        <button onclick="savePet()">Save My Holo-Pet</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="customize.js"></script>
+</body>
+</html>
